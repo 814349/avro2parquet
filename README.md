@@ -19,7 +19,7 @@ This tool will work on Avro container files (which I believe is just the
 standard Avro data file format).  It contains the Avro `GenericRecord` objects
 as the key and a `NullWritable` as the value.
 
-The tool is currently hardcoded to output [Snappy-compressed][3] Parquet.  It is
+The tool is currently hardcoded to output Gzip-compressed Parquet.  It is
 simply a MapReduce job using the `Tool` interface.
 
 The command is like so:
@@ -42,4 +42,3 @@ so for example:
 
 [1]: http://avro.apache.org/
 [2]: http://parquet.io/
-[3]: https://code.google.com/p/snappy/

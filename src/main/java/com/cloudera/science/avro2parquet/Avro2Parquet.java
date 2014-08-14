@@ -40,7 +40,7 @@ public class Avro2Parquet extends Configured implements Tool {
     job.setOutputFormatClass(AvroParquetOutputFormat.class);
     AvroParquetOutputFormat.setOutputPath(job, outputPath);
     AvroParquetOutputFormat.setSchema(job, avroSchema);
-    AvroParquetOutputFormat.setCompression(job, CompressionCodecName.SNAPPY);
+    AvroParquetOutputFormat.setCompression(job, CompressionCodecName.GZIP);
     AvroParquetOutputFormat.setCompressOutput(job, true);
     
     /* Impala likes Parquet files to have only a single row group.
